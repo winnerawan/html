@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/apps', 'Api\AppsController@getApps');
+Route::get('/ads', 'Api\AdsController@ads');
