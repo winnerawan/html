@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\App;
+use App\Ads;
 
-class AppController extends Controller
+class AdController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AppController extends Controller
      */
     public function index()
     {
-        return view('admin.apps.index')->with(['apps' => App::all()]);
+        //
     }
 
     /**
@@ -24,7 +24,7 @@ class AppController extends Controller
      */
     public function create()
     {
-        return view('admin.apps.create');
+        //
     }
 
     /**
@@ -35,15 +35,7 @@ class AppController extends Controller
      */
     public function store(Request $request)
     {
-        $app = new App();
-        $app->name = $request->name;
-        $app->description = $request->description;
-        $app->link = $request->link;
-        $app->image = $request->image;
-        $app->version = $request->version;
-        $app->save();
-
-        return redirect()->route('apps.index');
+        //
     }
 
     /**
@@ -65,7 +57,8 @@ class AppController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.apps.edit')->with(['app' => App::find($id)]);
+        $ad = Ads::find($id);
+        return view('admin.ads.edit')->with(['ad' => $ad]);
     }
 
     /**
@@ -77,14 +70,14 @@ class AppController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $app = App::find($id);
-        $app->name = $request->name;
-        $app->description = $request->description;
-        $app->link = $request->link;
-        $app->image = $request->image;
-        $app->version = $request->version;
-        $app->save();
+        $ad = Ads::find($id);
+        $ad->banner = $request->banner;
+        $ad->interstitial = $request->interstitial;
+        $ad->reward = $request->reward;
+        $ad->app_version = $request->app_version;
+        $ad->link = $request->link;
 
+        $ad->save();
         return redirect()->route('apps.index');
     }
 
@@ -96,9 +89,8 @@ class AppController extends Controller
      */
     public function destroy($id)
     {
-        $app = App::find($id);
-        $app->delete();
-
+        $ad = Ads::find($id);
+        $ad->delete();
         return redirect()->route('apps.index');
     }
 }
