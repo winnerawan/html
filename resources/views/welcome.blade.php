@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-640x920.png">
-<title>mobili - mobile template</title>
+<title>iBacol - mobile apps</title>
 <link rel="stylesheet" href="{{ asset("css/swiper.css") }}">
 <link rel="stylesheet" href="{{ asset("css/style.css") }}">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet"> 
@@ -135,7 +135,7 @@
                  <div class="swiper-container slidertoolbar">
                     <div class="swiper-wrapper">
                     
-                      <div class="swiper-slide" style="background-image:url(images/slide1.jpg);">
+                      {{-- <div class="swiper-slide" style="background-image:url(images/slide2.jpg);">
 		   
 			 <div class="slider-caption">
 			        
@@ -143,9 +143,9 @@
 				  <p data-swiper-parallax="-30%">Design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality.</p>
 				  <a href="about.html" class="slider-caption__more" data-swiper-parallax="-60%">READ MORE</a>
 			 </div>
-		      </div> 
+		      </div>  --}}
                       
-                      <div class="swiper-slide" style="background-image:url(images/slide2.jpg);">
+                      {{-- <div class="swiper-slide" style="background-image:url(images/slide2.jpg);">
 				  
 				<div class="slider-caption">
 				
@@ -154,13 +154,13 @@
 				<a href="about.html" class="slider-caption__more" data-swiper-parallax="-60%">READ MORE</a>
 				</div>	
 		
-                      </div>
+                      </div> --}}
                       <div class="swiper-slide" style="background-image:url(images/slide3.jpg);">
 		  
 				<div class="slider-caption">
 				
-				<h2 data-swiper-parallax="-100%" class="title--white">Web &amp; Native</h2>
-				<p data-swiper-parallax="-30%" class="text--white">You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality.</p>
+				<h2 data-swiper-parallax="-100%" class="title--white">iBacol</h2>
+				<p data-swiper-parallax="-30%" class="text--white">Find your bacol apps. Created for you with love.</p>
 				<a href="about.html" class="slider-caption__more" data-swiper-parallax="-60%">READ MORE</a>
 				</div>
                   
